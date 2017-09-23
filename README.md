@@ -3,7 +3,10 @@
 **Adjustable, blurred Refraction shaders** created with Amplify Shader Editor using **Command Buffers**. Cool to create **glass like materials**. **Works without Amplify Shader Editor**. Inspired by an [Unity blog entry](https://blogs.unity3d.com/2015/02/06/extending-unity-5-rendering-pipeline-command-buffers). 
 
 # Goal
-To create **cool looking glass materials** it's nice to have **refraction** on the surfaces. In recent games, glass materials sometimes also feature a dynamic blurred refraction on their surface. See the new **DOOM** for example:
+To create **cool looking glass materials** it's nice to have **refraction** on the surfaces. In recent games, glass materials sometimes also feature a dynamic blurred refraction on their surface.
+
+See the new **DOOM** for example:
+
 ![](http://www.adriancourreges.com/img/blog/2016/doom2016/shot/70_glass_after.jpg)
 
 To achieve this effect in Unity the [classical approach](https://forum.unity.com/threads/simple-optimized-blur-shader.185327/) is to use a GrabPass in your shader & blur several instances of the same screen based texture. Since **Unity 5** there is an alternative to this approach using [CommandBuffers](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.html). See [this blog entry](https://blogs.unity3d.com/2015/02/06/extending-unity-5-rendering-pipeline-command-buffers/) for more detail. *TL;DR: Using Command buffers is more performant, flexible and easier to use than a normal grab pass in the above case.*
@@ -13,10 +16,10 @@ Since I haven't found any sources except the Unity blog entry on how to achieve 
 **Disclaimer:** I'm no expert in Shader/Graphics Programming, I just felt the urge to contribute and help others. Everyone is encouraged to contribute to this project and make it better. :)
 
 ### Screenshots
-![](https://user-images.githubusercontent.com/530629/30776705-77c565b4-a0ab-11e7-9fac-3d61d49e6190.png)
 The blur amount can be tweaked as a simple float property.
-![](https://user-images.githubusercontent.com/530629/30776643-6e7278d6-a0aa-11e7-93be-ac8fd8c9404b.png)
+![](https://user-images.githubusercontent.com/530629/30776705-77c565b4-a0ab-11e7-9fac-3d61d49e6190.png)
 Reflectivity, Distortion, Emission contribution and a lot of other things can be tweaked.
+![](https://user-images.githubusercontent.com/530629/30776643-6e7278d6-a0aa-11e7-93be-ac8fd8c9404b.png)
 
 ### Usage
 1. **Copy the contents** of this repository into your **Unity project**.
@@ -29,10 +32,12 @@ Reflectivity, Distortion, Emission contribution and a lot of other things can be
 
 #### *RefractionWithCommandBuffer.shader*
 ![](https://user-images.githubusercontent.com/530629/30776719-ad4a96fa-a0ab-11e7-91c4-17881574ab7a.png)
+
 *Note: To give maximum flexibility 3 textures are used to define the material. The property name already shows you which channels of the texture are used for which purpose.*
 
 ### *RefractionWithCommandBufferCheaper.shader*
 ![](https://user-images.githubusercontent.com/530629/30776716-9c4a5a48-a0ab-11e7-9c64-727bf59c4401.png)
+
 *Note: This is the more easy to use, faster version of the shader (less texture calls). A lot of the properties are tweaked by using sliders.*
 
 ### ASE Graphs
