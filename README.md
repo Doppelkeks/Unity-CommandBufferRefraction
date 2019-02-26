@@ -2,6 +2,8 @@
 
 **Adjustable, blurred Refraction shaders** created with Amplify Shader Editor using **Command Buffers**. Cool to create **glass like materials**. **Works without Amplify Shader Editor**. Inspired by an [Unity blog entry](https://blogs.unity3d.com/2015/02/06/extending-unity-5-rendering-pipeline-command-buffers). 
 
+This implementation was initially created for use in **[Pizza Connection 3](https://store.steampowered.com/app/588160/Pizza_Connection_3/)**, but I adapted the approach for general usage.
+
 # Goal
 To create **cool looking glass materials** it's nice to have **refraction** on the surfaces. In recent games, glass materials sometimes also feature a dynamic blurred refraction on their surface.
 
